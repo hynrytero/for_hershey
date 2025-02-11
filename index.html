@@ -7,10 +7,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="./icons/icon.png">
-    <audio autoplay loop>
+    <link rel="stylesheet" href="styles.css">
+    <audio id="bgMusic">
         <source src="./music/Dionela - Marilag (Official Lyric Video).mp3" type="audio/mp3">
     </audio>
-    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="text" style="display: flex; justify-content: center;"><span>Happy Valentine's Day! <br> My future RN</span></div>
@@ -89,14 +89,19 @@
         </div>
     </div>
 
-    <script>
-        document.querySelector('.message-button').addEventListener('click', function() {
-            document.querySelector('.message-overlay').classList.add('show');
-        });
+<script>
+    const audio = document.getElementById('bgMusic');
+    const messageButton = document.querySelector('.message-button');
+    
+    messageButton.addEventListener('click', function() {
+        document.querySelector('.message-overlay').classList.add('show');
+        audio.play();
+    });
 
-        document.querySelector('.close-button').addEventListener('click', function() {
-            document.querySelector('.message-overlay').classList.remove('show');
-        });
-    </script>
+    document.querySelector('.close-button').addEventListener('click', function() {
+        document.querySelector('.message-overlay').classList.remove('show');
+        audio.pause();
+    });
+</script>
 </body>
 </html>
