@@ -185,7 +185,7 @@ body {
 .text {
     position: absolute;
     color: #ff0040;
-    font-size: 50px;
+    font-size: 40px;
     font-family: "Satisfy", serif;
     font-weight: bold; 
     line-height: 1;
@@ -484,5 +484,5 @@ body {
 @keyframes waveBackground {
     0% { background-position: center 0px; }
     50% { background-position: center 20px; }
-    100% { background-position: center 0px; }
+    100% { background-position: center 10px; }
 }
