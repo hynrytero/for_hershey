@@ -5,11 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ILY Lil Hersh!</title>
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="./icons/icon.png">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            background-image: url('./images/heart-bg.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            position: relative;
+            animation: waveBackground 5s infinite ease-in-out;
+        }
+
+        /* Ensure all content stays above the background overlay */
+        .text, .cloud-container, .card-container {
+            position: relative;
+            z-index: 1;
+        }
+    </style>
     <link rel="stylesheet" href="styles.css">
     <audio id="bgMusic">
-        <source src="./music/Dionela - Marilag (Official Lyric Video).mp3" type="audio/mp3">
+        <source src="./music/playlist.mp3" type="audio/mp3">
     </audio>
 </head>
 <body>
@@ -54,32 +74,55 @@
                     <div class="left-side"></div>
                     <div class="right-side"></div>
                 </div>
-                <div class ="text-letter"><span>My letter of Love</span></div>
+                <div class="text-letter"><span>My letter of Love</span></div>
             </div>
             <button class="message-button">Click for a surprise! ❤️</button>
             
-            <!-- New photo frames section -->
             <div class="photo-frames">
                 <div class="frame-container">
                     <div class="frame-decoration"></div>
                     <div class="photo-frame">
-                        <img src="./images/476034228_9063115413765219_2611969805844750799_n.jpg" alt="Henry" />
+                        <img src="./images/henry.jpg" alt="Henry" />
                     </div>
                 </div>
                 <div class="frame-container">
                     <div class="frame-decoration"></div>
                     <div class="photo-frame">
-                        <img src="./images/476217901_1059823405911449_5041446895827211366_n.jpg" alt="Hershey" />
+                        <img src="./images/hershey.jpg" alt="Hershey" />
                     </div>
                 </div>
             </div>
             
             <div class="message-overlay">
                 <div class="message-content">
-                   mag buhat pako hahaha
+                    <h2>Happy Valentine’s Day, By! ❤️</h2>
+                    
+                    <p>
+                        Hello by, I really don’t know how to start this letter, but there is one thing I am sure of—I am really grateful 
+                        that God gave me such a wonderful woman like you. You are my sweetest joy and the love I never knew I needed.
+                    </p>
+            
+                    <p>
+                        In this short message by, I want to thank you for being there for me, for supporting me, and for making my life 
+                        so incredibly beautiful. I cherish every moment we share, and I look forward to all the adventures we will still 
+                        create.
+                    </p>
+            
+                    <p>
+                        I will seal this letter by, with a kiss and a promise that today and always, you will have my heart.
+                    </p>
+            
+                    <p><strong>I love you so much!</strong></p>
+            
+                    <p><em>From,</em><br><strong>Yo Boi, Henry</strong></p>
+            
+                    <div class="message-photo-frame">
+                        <img src="./images/us.jpg" alt="Message Photo" />
+                    </div>
                 </div>
                 <button class="close-button">×</button>
             </div>
+            
         </div>
         <div class="decoration">
             <svg viewBox="0 0 100 100">
@@ -89,19 +132,19 @@
         </div>
     </div>
 
-<script>
-    const audio = document.getElementById('bgMusic');
-    const messageButton = document.querySelector('.message-button');
-    
-    messageButton.addEventListener('click', function() {
-        document.querySelector('.message-overlay').classList.add('show');
-        audio.play();
-    });
+    <script>
+        const audio = document.getElementById('bgMusic');
+        const messageButton = document.querySelector('.message-button');
+        
+        messageButton.addEventListener('click', function() {
+            document.querySelector('.message-overlay').classList.add('show');
+            audio.play();
+        });
 
-    document.querySelector('.close-button').addEventListener('click', function() {
-        document.querySelector('.message-overlay').classList.remove('show');
-        audio.pause();
-    });
-</script>
+        document.querySelector('.close-button').addEventListener('click', function() {
+            document.querySelector('.message-overlay').classList.remove('show');
+            audio.pause();
+        });
+    </script>
 </body>
 </html>
